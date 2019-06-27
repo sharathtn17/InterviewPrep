@@ -1,0 +1,27 @@
+package newconcept;
+
+public class ThreadLocalImp {
+
+	public ThreadLocalImp()
+	{
+		System.out.println("Thread Local Imp COnstructor");
+	}
+	
+	 ThreadLocal<ThreadLocalImp> t=new ThreadLocal<ThreadLocalImp>(){
+		
+		@Override protected ThreadLocalImp initialValue() {
+	         System.out.println("Called Intial Value");
+			return new ThreadLocalImp();
+	    }
+	};
+	
+	public static void main(String args[])
+	{
+		ThreadLocal<String> threadLocal =
+	               new ThreadLocal<String>();
+		
+		threadLocal.get();
+		//System.out.println(ThreadLocalImp.get());
+		
+	}
+}

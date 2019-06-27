@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;collection.TreeSet.java&apos; to &apos;TreeSetImp.java&apos;&#x0D;&#x0A;- Original project: &apos;test&apos;&#x0D;&#x0A;- Original element: &apos;collection.TreeSet.java&apos;&#x0D;&#x0A;- Renamed element: &apos;collection.TreeSetImp.java&apos;" description="Rename compilation unit &apos;TreeSet.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;collection{TreeSet.java" name="TreeSetImp.java" references="false" stamp="1559368761233" version="1.0"/>
+</session>

@@ -1,0 +1,62 @@
+package com.framework.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+
+public abstract class Page{
+
+	public static WebDriver driver;
+
+	public Page( WebDriver driver ) {
+		this.driver=driver;
+		String pageName = pageName();
+
+	}
+	
+	public Page(){
+		
+	}
+
+	protected abstract String pageName();
+
+	public static void initializeDriver(String browser){
+
+		if(browser.equals("firefox"))
+		{
+			driver=new FirefoxDriver();
+		}
+
+		if(browser.equals("chrome"))
+		{System.setProperty("webdriver.chrome.driver", "C:/WebDriverServerStart/chromedriver.exe");
+		driver=new ChromeDriver();
+		}
+
+
+
+	}
+
+	protected WebElement findElementByXpath(String xpathExpression) {
+		// TODO Auto-generated method stub
+		return driver.findElement(By.xpath(xpathExpression));
+		
+	}
+	
+
+	protected void click(WebElement loginLink) {
+		// TODO Auto-generated method stub
+		loginLink.click();
+		
+	}
+	
+	protected void enterText(WebElement webElement, String text) {
+		// TODO Auto-generated method stub
+		
+		webElement.sendKeys(text);
+		
+	}
+}

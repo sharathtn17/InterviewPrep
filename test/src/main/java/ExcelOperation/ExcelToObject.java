@@ -1,0 +1,38 @@
+package ExcelOperation;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.List;
+
+import com.poiji.bind.Poiji;
+import com.poiji.exception.PoijiExcelType;
+
+import io.github.millij.poi.SpreadsheetReadException;
+import io.github.millij.poi.ss.reader.XlsReader;
+
+public class ExcelToObject {
+	
+	
+	public static List<Employee> exlToObject(String file) throws SpreadsheetReadException
+	{
+		
+		/*final File xlsxFile = new File("C:/Users/sn0000/workspace/test/src/main/java/ExcelOperation/user1.xls");
+		final XlsReader reader = new XlsReader();
+		List<Employee> employees = reader.read(Employee.class, xlsxFile);
+		*/
+		List<Employee> employees
+= Poiji.fromExcel(new File("C:/Users/sn0000/workspace/test/src/main/java/ExcelOperation/"+file+".xls"), Employee.class);
+		// alternatively
+	/*	InputStream stream = new FileInputStream(new File("C:/Users/sn0000/workspace/test/src/main/java/ExcelOperation/user1.xls"));
+		List<Employee> employees = Poiji.fromExcel(stream, PoijiExcelType.XLS, Employee.class,);*/
+		
+		System.out.println(employees.size());
+		for(Employee e:employees)
+		{
+			System.out.println(e.Name+" "+e.Age);
+		}
+		return employees;
+	}
+
+}

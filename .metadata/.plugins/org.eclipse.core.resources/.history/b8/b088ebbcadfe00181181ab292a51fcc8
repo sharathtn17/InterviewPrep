@@ -1,0 +1,22 @@
+package newconcept;
+
+public class JavaCon {
+	
+	
+	public static void main(String args[])
+	{
+		
+		Integer i=3;
+		Integer j=4;
+		Integer k=i;
+		
+		if(i==k)
+		System.out.println("i==k");
+		
+		if(i.equals(k))
+		{
+			System.out.println("iequlsk");
+		}
+	}
+
+}

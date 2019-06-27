@@ -1,0 +1,25 @@
+package testProject.test;
+
+public class revereseArryaRecurrsion {
+
+	public static String reverse(String str)
+	{
+		if(str.length()==1)
+		{
+			return str;
+		}
+		String ele=str.substring(0,1);
+		String rev=reverse(str.substring(1,str.length()));
+		rev=rev+ele;
+		return rev;
+	}
+	
+	public static void main(String args[])
+	{
+		
+		String str="noon";
+		
+		
+		System.out.println(revereseArryaRecurrsion.reverse(str).equals(str));
+	}
+}

@@ -1,0 +1,33 @@
+package dataStructure;
+
+public class LinkedList {
+    
+	Node head;
+	
+	 class Node
+	{
+		int data;
+		Node next;
+		
+		public void addToList(int element)
+		{   Node newnode=new Node();
+			if(head==null)
+			{
+				newnode.data=element;
+				newnode.next=null;
+			}
+				Node temp=head;
+			while(temp.next!=null)
+			{   
+				temp=temp.next;
+			}
+			
+			temp.next=newnode;
+			newnode.data=element;
+			newnode.next=null;
+		}
+		
+	}
+	 
+	 
+}

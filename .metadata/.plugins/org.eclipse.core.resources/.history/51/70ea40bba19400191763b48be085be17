@@ -1,0 +1,33 @@
+package Interview;
+
+public class separateZeros {
+	
+	
+	public static void main(String args[])
+	{
+		int[] arr={1010101001};
+		
+		int i=0;
+		int j=i+1;
+		while(j<arr.length)
+		{
+			if(arr[i]==0 && arr[j]==1)
+			{
+				arr[i]=1;
+				arr[j]=0;
+				i=j;
+				j=i+1;
+				
+			} else 
+			{
+				i=j;
+				j=i+1;
+			}
+			 
+			
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,95 @@
+package Interview;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import org.xnio.conduits.SynchronizedMessageSourceConduit;
+
+public class ComaparableImp {
+	
+	
+	public static void main(String args[])
+	{
+		Bottles bot1=new Bottles(1,"Plastic","Tupperware");
+		Bottles bot2=new Bottles(2,"Hard Plastic","Signoware");
+		Bottles bot3=new Bottles(5,"Steel","Milton");
+		Bottles bot4=new Bottles(3,"Aluminium","Celloware");
+		Bottles bot5=new Bottles(3,"Aluminium","Celloware");
+		
+		//List<Bottles> Ab=new ArrayList<Bottles>();
+		Set<Bottles> Ab=new HashSet<Bottles>();
+		Ab.add(bot1);
+		Ab.add(bot2);
+		Ab.add(bot3);
+		Ab.add(bot4);
+		Ab.add(bot5);
+		
+	//	Collections.sort(Ab);
+		
+		/*Collections.sort(Ab,new Comparator<Bottles>(){
+			
+			public int compare(Bottles b1,Bottles b2)
+			{
+				if(b1.id>b2.id) return 1;
+				else return -1;
+			}
+		});*/
+		
+		System.out.println(Ab);
+		for(Bottles b:Ab)
+		{
+			System.out.println(b);
+		}
+		
+	}
+	
+
+}
+
+
+class Bottles implements Comparable{
+	
+	int id;
+	String type;
+	String ComPName;
+	
+	Bottles(int id,String type,String ComPName)
+	{
+	  this.id=id;
+	  this.type=type;
+	  this.ComPName=ComPName;
+	}
+     
+	public String toString()
+	{
+		//System.out.println("id"+this.id+" Type"+this.type+" CompanyName"+this.ComPName);
+		return "id "+this.id+" Type "+this.type+" CompanyName "+this.ComPName;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		/*if(this.id>((Bottles)o).id) return 1;
+		else
+		return -1;*/
+		
+		return this.ComPName.compareTo(((Bottles)o).ComPName);
+	}
+	
+	/*public String equals()
+	{
+		
+	}*/
+	public boolean equals(Object obj) {
+        return (5 == obj.hashCode());
+}
+	@Override
+	public int hashCode()
+	{
+		return this.id;
+	}
+}

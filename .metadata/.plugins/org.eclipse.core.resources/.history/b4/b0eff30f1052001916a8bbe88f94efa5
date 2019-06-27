@@ -1,0 +1,57 @@
+package com.project.tests;
+
+import java.io.IOException;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory;
+
+import com.project.functionalComponet.BaseTest;
+import com.project.functionalComponet.Users;
+import com.project.pages.LoginPage;
+
+import PageAction.LoginPageAction;
+
+public class TC_LoginTC extends BaseTest{
+	
+	
+	@Test(dataProvider="login")
+	public void loginTest(String username,String pwd, String env,int inti) throws IOException 
+	{
+			
+		/*//logger.info("URL is opened");
+		
+		//LoginPageAction.signIN_Action("selenium", "selenium").VerifyLogin("");
+		LoginPage lp=new LoginPage(driver);
+		lp.typetext("isdisplayed in selenium")
+		.submitb()
+		sys
+		.VerifyLogin();*/
+		System.out.println(username +" "+ pwd +" "+env+" "+inti);
+		Users.guestUser
+		//._homePage()
+		.Loginpage()
+		.setUserName("wqqwqwq")
+		//.setPassword("qwqwqwq")
+		.clickSubmit()
+		.VerifyLogin()
+		._loginPage()
+		.setPassword("dsdsdd");
+		
+		
+		
+
+}
+	
+	@DataProvider(name="login")
+	public Object[][] dataProvider()
+	{
+		return new Object[][]{
+			{"name1","pwd1","qa",10} ,{"name2","pwd2","PROD",76565765}
+		
+		                     
+	};
+	}
+	
+
+}

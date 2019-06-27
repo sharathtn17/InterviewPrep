@@ -1,0 +1,34 @@
+package ExcelOperation;
+
+import com.poiji.annotation.ExcelCell;
+import com.poiji.annotation.ExcelRow;
+
+import io.github.millij.poi.ss.model.annotations.Sheet;
+import io.github.millij.poi.ss.model.annotations.SheetColumn;
+
+public class Employee {
+	
+	    @ExcelRow                    
+	    public int rowIndex;
+
+	    @ExcelCell(0)                
+	    public int Age;     
+
+	    @ExcelCell(1)
+	    public String Name;
+
+	    
+	    @Override
+	    public boolean equals(Object o) { 
+	    	
+	    
+	    	
+	    	if(this.Age==((Employee)o).Age && this.Name==((Employee)o).Name)
+	    		return true;
+			
+	    	return false;
+	    }
+	
+}
+
+

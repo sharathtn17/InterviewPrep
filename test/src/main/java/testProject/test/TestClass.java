@@ -1,0 +1,114 @@
+package testProject.test;
+
+
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+//import for Scanner and other utility classes
+import java.util.*;
+import java.lang.*;
+
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+       
+
+        //BufferedReader
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String name = br.readLine(); 
+        // Reading input from STDIN
+      
+        //int charstatus=0;
+         boolean invalidInput=false;
+         boolean isChar=false;
+         int input=Integer.parseInt(name);
+        //  System.out.println(input);
+         if(input<10)
+         {
+             for(int i=0;i<input;i++)
+             {    invalidInput=false;
+                  isChar =false;
+                  boolean isAlpha=false;
+                  int setStatus=0;
+                  int status=0;
+                  boolean isUppercase=false;
+                  boolean isLowercase=false;
+                  int count=0;
+                 String str=br.readLine();
+               // System.out.println(str);
+                 for(char c :str.toCharArray())
+                 {
+                     if(Character.isDigit(c))
+                     {  
+                           if(setStatus==0) 
+                           {
+                             isChar=true;
+                             setStatus=1;
+                           }
+                      
+                             
+                    }
+                     else if(Character.isAlphabetic(c))
+                     {   isAlpha=true;
+                         
+                         if(status==0)
+                         {
+                         if(Character.isUpperCase(c))
+                         {
+                             isUppercase=true;
+                             status=1;
+                         }else{
+                             isLowercase=true;
+                             status=1;
+                         }
+                         }else{
+                             
+                                           
+                         if(isUppercase && !Character.isUpperCase(c))
+                         {
+                             count++;
+                             
+                         }
+                         
+                         if(isLowercase && !Character.isLowerCase(c))
+                         {
+                             count++;
+                             
+                         }
+                         
+                         
+                         
+                         }
+                         
+                         //status=1;
+                     }else
+                     {  invalidInput=true;
+                         System.out.println("Invalid Input");
+                         break;
+                     }
+                     
+                 } 
+                     
+                 
+                 
+                 if(!invalidInput){
+                     
+                     if(!isChar && isAlpha)
+                     {
+                      System.out.println(count);
+                     }
+                     else if(isChar && isAlpha){
+                         System.out.println(0);
+                         
+                     }else {System.out.println("Invalid Input");}
+                 }    
+             }
+         } else{
+             
+             System.out.println("Invalid Test");
+         }
+         
+    }
+}    

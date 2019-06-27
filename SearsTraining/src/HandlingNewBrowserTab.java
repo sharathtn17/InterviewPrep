@@ -1,0 +1,38 @@
+
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class HandlingNewBrowserTab {
+
+	static String parentWindow;
+	static  String newWindow = null;
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		WebDriver driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.navigate().to("http://www.seleniumframework.com/Practiceform/");
+		driver.findElement(By.xpath("button1")).click();
+		
+		Set <String> windowsIDs = driver.getWindowHandles();
+		windowsIDs.forEach(window->{
+			driver.switchTo().window(window);
+			driver.getTitle();
+			});
+		Iterator<String> iter = windowsIDs.iterator();
+		while(iter.hasNext()){			
+			parentWindow = iter.next();
+			newWindow = iter.next();
+		}
+		driver.switchTo().window(newWindow);
+		driver.findElement(By.linkText("Choosing an Automation Solution")).click();
+		driver.manage().window().maximize();
+		driver.switchTo().window(parentWindow);
+		driver.quit();
+	}
+}

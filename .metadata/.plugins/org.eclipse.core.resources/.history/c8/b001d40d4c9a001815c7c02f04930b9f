@@ -1,0 +1,85 @@
+package TestCases;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.json.JSONObject;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import restmethod.RestAction;
+
+public class V7 {
+	
+@BeforeMethod
+	public void setup()
+ {
+	 RestAssured.baseURI = "http://cisvip.qa.ch3.s.com/universalservices";
+	
+ }
+	
+	@Test
+	public void validateUpateMemberPin()
+	{  Map<String,String> mp=new HashMap<String,String>();
+	   mp.put("memnum", "7081327702717632");
+	   mp.put("pin", "32322");
+	   String Api="v7/user/updateMemberPin";
+		
+	    Response res=RestAction.getRequestForm(mp, Api);
+		RestAction.validateResponseStatusCode(res);
+	}
+	
+
+	@Test
+	public void validatePersonalInfoAPI()
+	{  Map<String,String> mp=new HashMap<String,String>();
+	  mp.put("memnum", "7081327702717632");
+	// mp.put("pin", "32234");
+	 //  String pin="32234";
+	  String Api="v7/user/personalinfo";
+	  String personinfoget="v7/user";
+	  JSONObject requestParams = new JSONObject();
+		
+		requestParams.put("userId", "10636666"); // Cast
+		requestParams.put("sywNo", "7081327672217159");
+		 
+		requestParams.put("fname", "Saritappa");
+		requestParams.put("lname", "Patilappa");
+		requestParams.put("birthDay", "");
+		requestParams.put("anniversary", "01-01-1111");
+		requestParams.put("annivPreferenceId", "null");
+		
+	   Response res=RestAction.postRequest(requestParams, Api);
+	   RestAction.validateResponseStatusCode(res);
+	   
+	   Response responseII=RestAction.getRequestFormXML(mp, personinfoget);
+		
+	   /* Response res=RestAction.getRequestForm(mp, Api);
+		RestAction.validateResponseStatusCode(res);
+		System.out.println(res.body().asString());
+		Assert.assertEquals(res.body().asString().trim(), "32234");*/
+		
+		
+	}
+	
+	@Test
+	public void validategetMemberPin()
+	{  Map<String,String> mp=new HashMap<String,String>();
+	   mp.put("memnum", "7081327702717632");
+	// mp.put("pin", "32234");
+	 //  String pin="32234";
+	   String Api="v7/user/getMemberPin";
+		
+	    Response res=RestAction.getRequestForm(mp, Api);
+		RestAction.validateResponseStatusCode(res);
+	
+		System.out.println(res.body().asString());
+		
+		Assert.assertEquals(res.body().asString().trim(), "32234");
+	}
+	
+	
+}

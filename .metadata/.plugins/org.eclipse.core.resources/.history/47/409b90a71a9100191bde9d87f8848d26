@@ -1,0 +1,52 @@
+package testProject.test;
+
+public class MaxPalindrome {
+
+	
+	
+	public static void main(String args[])
+	{
+		String str="madmadamoroxyz";
+		String str2="";
+		int max=0;
+		for(int i=0;i<str.length()-1;i++)
+		{   
+			str2=str2+str.charAt(i);
+			String s3="";
+			for(int j=0;j<str2.length()-1;j++)
+			{
+				 s3=s3+str2.charAt(j);
+				System.out.println(str2);
+				if(str2.length()!=1)
+				{
+					
+					if(reverse(str2).equals(str2))
+					{
+						if(str2.length()>max)
+						{
+							max=str2.length();
+						}
+						System.out.println(str2);
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+		
+		
+		
+	}
+	
+	public static String reverse(String str)
+	{    String newStr="";
+		for(int j=str.length()-1;j>=0;j--)
+		{
+			newStr=newStr+str.charAt(j);
+			
+		}
+		return newStr;
+	}
+}

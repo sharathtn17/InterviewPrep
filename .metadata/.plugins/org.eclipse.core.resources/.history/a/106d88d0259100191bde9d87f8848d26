@@ -1,0 +1,57 @@
+package testProject.test;
+
+public class alpha {
+
+	
+	public static void main(){
+		Scanner in = new Scanner(System.in);
+		System.out.println("please enter the number of test cases");
+		int a = in.nextInt();
+		System.out.println("You entered integer "+a);
+
+		System.out.println("please enter the input seperated by , for each test case");
+		String s = in.next();
+		System.out.println("You entered string "+s);
+
+		String strArr[]=s.split(",");
+		if(strArr.length==a){
+		
+			for(int i=0;i<a;i++){
+				char arr[]=strArr[i].toCharArray();
+				int count=0;
+				Character ch=arr[0];
+				if(!(Character.isDigit(ch) || Character.isLetter(ch))){
+					System.out.println(" testcase output is 0 sice it is satrting with special character");
+				}
+				else if(Character.isLetter(ch) && Character.isUpperCase(ch)){
+					for(int j=1;j<arr.length;j++){
+						if(Character.isLetter(arr[j]) && Character.isLowerCase(arr[j])){
+							count++;
+							char uppercase=Character.toUpperCase(arr[j]);
+							System.out.println(uppercase);
+							strArr[i]=strArr[i].replace(arr[j],uppercase);
+						}
+					}
+					System.out.println(strArr[i]+""+count);
+				}
+				else if(Character.isLetter(ch) && Character.isLowerCase(ch)){
+					for(int j=1;j<arr.length;j++){
+						if(Character.isLetter(arr[j]) && Character.isUpperCase(arr[j])){
+							count++;
+							char lowercase=Character.toLowerCase(arr[j]);
+							System.out.println(lowercase);
+							strArr[i]=strArr[i].replace(arr[j],lowercase);
+						}
+					}
+					System.out.println(strArr[i]+""+count);
+				}
+				else if(Character.isDigit(ch)){
+					System.out.println(" testcase output is 0 sice it is starting with digit");
+				}
+	
+			}	   
+		}
+		else
+			System.out.println("given testcases count="+a+"given input array size="+strArr.length);
+	}
+}

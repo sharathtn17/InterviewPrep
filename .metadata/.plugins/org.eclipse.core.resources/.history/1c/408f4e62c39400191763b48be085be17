@@ -1,0 +1,27 @@
+package dataStructure;
+
+public class ImplementTree {
+
+	Node root;
+	
+	class Node
+	{
+		Node left,right=null;
+		int key;
+		Node(int ele)
+		{
+			this.key=ele;
+		}
+	}
+	
+	
+	public void add(int key)
+	{
+		
+		
+		
+		
+	}
+	
+	
+}

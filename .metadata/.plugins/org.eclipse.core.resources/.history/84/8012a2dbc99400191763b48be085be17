@@ -1,0 +1,66 @@
+package dataStructure;
+
+public class ImplementTree {
+
+	Node root;
+	
+	class Node
+	{
+		Node left,right=null;
+		int key;
+		Node(int ele)
+		{
+			this.key=ele;
+		}
+	}
+	
+	
+	public Node add(Node root1,int key)
+	{
+		Node temp=root1;
+		if(root==null)
+		{Node nodenew=new Node(key);
+			root=nodenew;
+			System.out.println("added to root");
+			return root;
+		}else
+		{
+			if(key>temp.key)
+			{
+				add(temp.right,key);
+			}else{
+				
+				add(temp.left,key);
+			}
+		}
+			
+			
+			
+			if(temp.right==null||temp.left==null)
+		{   Node nodenew=new Node(key);
+		   if(key>temp.key)
+		   {
+			  temp.right=nodenew; 
+			  System.out.println("added to right");
+		   }else
+		   {
+			   temp.left=nodenew; 
+			   System.out.println("added to left");
+		   }
+		   // root=nodenew;
+		    return root;
+			//System.out.println("TREE EMPTY");
+			
+		}
+		
+			
+		
+		
+		
+		return temp;
+		
+	}
+	
+	
+}
+

@@ -1,0 +1,42 @@
+package testProject.test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class removeduparray {
+
+	
+	public static int[] rdup(int arr1[])
+	{
+		//int[] arr = null;
+		
+		Set<Integer> set=new HashSet<Integer>();
+		
+	for (int i=0;i<=arr1.length;i++)
+	{
+		set.add(arr1[i]);
+	}
+	
+for(int i:set)
+{
+	arr1[i]=i;
+}
+    
+    
+		return arr1;
+		
+		
+		
+		
+	}
+	
+	public static void main(String args[])
+	{
+		int[] arr={2,3,6};
+		
+		System.out.println(rdup(arr));
+		
+		
+	}
+	
+}

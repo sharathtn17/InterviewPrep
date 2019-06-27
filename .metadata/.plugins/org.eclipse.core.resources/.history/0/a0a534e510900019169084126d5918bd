@@ -1,0 +1,76 @@
+package testProject.test;
+
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+//import for Scanner and other utility classes
+import java.util.*;
+import java.lang.*;
+
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+       
+
+        //BufferedReader
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String name = br.readLine(); 
+        // Reading input from STDIN
+        int status=1;
+        int statuschar=0;
+        //int charstatus=0;
+         boolean invalidInput=false;
+         boolean isAlpha=true;
+         int input=Integer.parseInt(name);
+        //  System.out.println(input);
+         if(input<10)
+         {
+             for(int i=0;i<input;i++)
+             {    invalidInput=false;
+                  isAlpha=false;
+                 String str=br.readLine();
+               // System.out.println(str);
+                 for(char c :str.toCharArray())
+                 {
+                     if(Character.isDigit(c))
+                     {  
+                         
+                             isAlpha=false;
+                        
+                         
+                     }
+                     else if(Character.isAlphabetic(c))
+                     {
+                         status=1;
+                     }else
+                     {   invalidInput=true;
+                         System.out.println("Invalid Input");
+                         break;
+                     }
+                     
+                 } 
+                     
+                 
+                 
+                 if(!invalidInput){
+                     
+                     if(isAlpha)
+                     {
+                      System.out.println(1);
+                     }
+                     else{
+                         System.out.println(0);
+                         
+                     }
+                 }    
+             }
+         } else{
+             
+             System.out.println("Invalid Test");
+         }
+         
+    }
+}    
+

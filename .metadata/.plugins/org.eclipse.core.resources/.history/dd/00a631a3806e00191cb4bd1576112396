@@ -1,0 +1,21 @@
+package testProject.test;
+
+public class AnagramProgram {
+
+	public void Anagram(String s1, String s2)
+	{
+		
+		
+	}
+	
+	
+	
+	public static void main(String args[])
+	{
+		AnagramProgram a=new AnagramProgram();
+		a.Anagram("","");
+		
+		
+		
+	}
+}

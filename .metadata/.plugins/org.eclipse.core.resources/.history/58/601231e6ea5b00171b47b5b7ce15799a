@@ -1,0 +1,34 @@
+package testProject.test;
+
+import java.util.HashMap;
+
+public class palindrome {
+
+	public HashMap<Character,Integer> calFreq(String input)
+	{
+		HashMap<Character,Integer> Storechatocc=new HashMap<Character,Integer>();
+		char[] strArry=input.toCharArray();
+				
+		for(char ch:strArry)
+		{
+			if(Storechatocc.containsKey(ch))
+			{
+				Storechatocc.put(ch, Storechatocc.get(ch)+1);
+			}
+			else
+			{
+				Storechatocc.put(ch, 1);
+			}
+		}
+		
+		
+		System.out.println(Storechatocc);
+	}
+	
+	
+	public static void main(String[]  args)
+	{  String input="sdsaggsad";
+	}
+	
+		
+}

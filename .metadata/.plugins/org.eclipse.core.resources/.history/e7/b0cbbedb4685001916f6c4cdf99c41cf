@@ -1,0 +1,45 @@
+package Interview;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class ComaparableImp {
+	
+	
+	public static void main(String args[])
+	{
+		Bottles bot1=new Bottles(1,"Plastic","Tupperware");
+		Bottles bot2=new Bottles(1,"Hard Plastic","Signoware");
+		Bottles bot3=new Bottles(1,"Steel","Milton");
+		Bottles bot4=new Bottles(1,"Aluminium","Celloware");
+		
+		List<Bottles> Ab=new ArrayList<Bottles>();
+		Ab.add(bot1);
+		Ab.add(bot2);
+		Ab.add(bot3);
+		Ab.add(bot4);
+		
+		
+		Collections.sort(Ab);
+	}
+	
+
+}
+
+
+class Bottles{
+	
+	int id;
+	String type;
+	String ComPName;
+	
+	Bottles(int id,String type,String ComPName)
+	{
+	  this.id=id;
+	  this.type=type;
+	  this.ComPName=ComPName;
+	}
+     
+	
+}

@@ -1,0 +1,17 @@
+package testProject.test;
+
+import java.util.TreeSet;
+
+public class NthElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    
+		int arr[]={3,2,1,4,5,0};
+		
+		TreeSet<Integer> set=new Treeset();
+		set.add(e)
+		
+	}
+
+}

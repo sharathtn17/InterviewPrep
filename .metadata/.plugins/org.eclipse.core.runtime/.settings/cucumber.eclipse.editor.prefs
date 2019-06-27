@@ -1,0 +1,3 @@
+cucumber.eclipse.editor.format_center_steps=true
+cucumber.eclipse.editor.format_preserve_blank_line_between_steps=true
+eclipse.preferences.version=1

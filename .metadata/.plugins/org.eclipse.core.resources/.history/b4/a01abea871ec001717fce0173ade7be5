@@ -1,0 +1,43 @@
+package Profram;
+
+public class PrintNameinStar {
+	public static void main(String[] args) {
+		int n=6;
+		for(int i=n;i<=0;i--)
+		{   System.out.print("*");
+			for(int j=0;j<i;j++)
+			{
+				
+			}
+		}
+		
+	}
+
+}
+
+/*   * 
+    **
+   ***
+  ****
+ *****
+******
+*/
+
+
+/*--
+********
+******
+****
+**
+*
+
+--
+*/
+
+
+/*------------
+s
+sh
+sha
+shar
+-----------*/

@@ -1,0 +1,27 @@
+package testProject.test;
+
+public class reversSentence {
+	
+	public static void main(String args[])
+	{
+		String org="this is a sentence";
+		String revrse="";
+		
+		String[] str=org.split(" ");
+		//System.out.print(str.length);
+		for(int i=0;i<str.length;i++)
+		{
+			String s=str[i];
+			for(int j=s.length()-1;j>=0;j--)
+			{
+				revrse=revrse+s.charAt(j);
+				
+			}
+			revrse=revrse+" ";
+		}
+		
+		System.out.println(revrse);
+	}
+	
+
+}

@@ -1,0 +1,16 @@
+package dataStructure;
+
+public class DataStrutureTestClass {
+
+	
+	public static void main(String args[])
+	{
+		LinkedList.Node ll=new LinkedList.Node();
+		ll.addToList(1);
+		
+		
+		
+		
+		
+	}
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="22280" started-at="2019-05-28T13:57:07Z" finished-at="2019-05-28T13:57:29Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="22280" started-at="2019-05-28T13:57:07Z" finished-at="2019-05-28T13:57:29Z">
+      <class name="TestCases.V7">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.V7@78c730]" name="setup" is-config="true" duration-ms="9918" started-at="2019-05-28T19:27:07Z" finished-at="2019-05-28T19:27:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="createUser()[pri:0, instance:TestCases.V7@78c730]" name="createUser" duration-ms="7025" started-at="2019-05-28T19:27:17Z" finished-at="2019-05-28T19:27:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUser -->
+        <test-method status="PASS" signature="validatePersonalInfoAPI()[pri:0, instance:TestCases.V7@78c730]" name="validatePersonalInfoAPI" duration-ms="5278" started-at="2019-05-28T19:27:24Z" finished-at="2019-05-28T19:27:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePersonalInfoAPI -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.V7@78c730]" name="setup" is-config="true" duration-ms="0" started-at="2019-05-28T19:27:24Z" finished-at="2019-05-28T19:27:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+      </class> <!-- TestCases.V7 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

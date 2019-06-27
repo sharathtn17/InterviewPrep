@@ -1,0 +1,91 @@
+package Interview;
+
+public class QueuImp {
+
+	static class queue
+	{
+		
+		int rear=-1;
+		int front=-1;
+		
+		int max=99;
+		int que[]=new int[max];
+		
+		boolean isEmpty()
+		{
+			if(front==-1)
+				return true;
+			else
+				return false;
+		}
+		boolean isFull()
+		{
+			if(front==max)
+				return true;
+			else
+				return false;
+		}
+		
+		void add(int ele)
+		{
+			if(front==-1)
+			{
+				que[++front]=ele;
+				rear++;
+			}else
+			{
+				que[++front]=ele;
+			}
+			
+		}
+		int remove()
+		{
+			if(isEmpty())
+			{
+				System.out.println("Queue is empty");
+				return 0;
+			}
+			if(front==rear)
+			{   
+				int e=que[front];
+				front--;
+				rear--;
+				return e;
+				
+			}else
+			{
+				int e=que[rear];
+				rear++;
+				return e;
+			}
+			
+		}
+		@Override
+		public String toString()
+		{
+			for(int i=rear;i<=front;i++)
+			{
+				System.out.print(que[i]);
+			}
+			return "";
+			
+		}
+	}
+	
+	
+	public static void main(String args[])
+	{
+		
+		queue q=new queue();
+		q.add(2);
+		q.add(4);
+		q.add(7);
+		System.out.println(q);
+		q.remove();
+		System.out.println(q);
+		q.remove();
+		q.remove();
+		System.out.println(q);
+	}
+	
+}

@@ -1,0 +1,14 @@
+package ExcelOperation;
+
+import java.util.ArrayList;
+
+public class compareExl {
+
+	
+	public static void main(String args[])
+	{
+		ArrayList<Employee> arr1=(ArrayList<Employee>) ExcelToObject.exlToObject("user1");
+	    ArrayList<Employee> arr2=(ArrayList<Employee>) ExcelToObject.exlToObject("user2");
+		
+	}
+}

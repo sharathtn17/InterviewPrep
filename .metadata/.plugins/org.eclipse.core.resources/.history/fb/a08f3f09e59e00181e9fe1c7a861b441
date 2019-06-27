@@ -1,0 +1,13 @@
+package testProject.test;
+
+public class Testarrya {
+
+	
+	public static void main(String args[])
+	{
+		int arr[]={3,4,5,2,4,7,3};
+		
+		
+		
+	}
+}

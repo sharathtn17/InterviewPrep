@@ -1,0 +1,54 @@
+package testProject.test;
+
+public class AnagramProgram {
+
+	public void Anagram(String s1, String s2)
+	{
+		
+		String copyS1=s1.replace("//s", "").toLowerCase();
+		String copyS2=s2.replace("//s", "").toLowerCase();
+		
+		boolean status=true;
+		
+		StringBuffer sb=new StringBuffer(copyS2);
+		
+		for(char c:copyS1.toCharArray())
+		{
+			
+			int index=copyS2.indexOf(c);
+			System.out.println(index+"index");
+			if(index!=-1)
+			{
+				sb.deleteCharAt(index);
+				
+				
+			}else{
+				
+				status=false;
+				break;
+			}
+			
+			
+			
+		}
+		
+			if(status)
+			{
+				System.out.println("Anagram");
+			}else{
+				System.out.println("Not AnagramcopyS1");
+			}
+		
+	}
+	
+	
+	
+	public static void main(String args[])
+	{
+		AnagramProgram a=new AnagramProgram();
+		a.Anagram("Mother In Law", "Hitler Woman");
+		
+		
+		
+	}
+}

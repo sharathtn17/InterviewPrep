@@ -1,0 +1,22 @@
+package Collection;
+
+
+public class Student {
+    public static String getName() {
+        return name;
+    }
+    public  void setName(String name) {
+        this.name = name;
+    }
+
+    public static void main(String[] args) {
+       Studnet s= new Student();
+        s.setName("Danielle");
+        s.getName();
+        
+        s.setName("Bob"); // Will not work!
+        s.getName(); // Will not work!
+        
+
+    }
+}

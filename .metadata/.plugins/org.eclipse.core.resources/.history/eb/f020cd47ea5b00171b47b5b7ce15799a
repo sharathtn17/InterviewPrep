@@ -1,0 +1,30 @@
+package testProject.test;
+
+import java.util.HashMap;
+
+public class palindrome {
+
+	
+	
+	public static void main(String[]  args)
+	{
+		HashMap<Character,Integer> Storechatocc=new HashMap<Character,Integer>();
+		
+		String input="sdsaggsad";
+		char[] strArry=input.toCharArray();
+		
+		
+		for(char ch:strArry)
+		{
+			if(Storechatocc.containsKey(ch))
+			{
+				Storechatocc.put(ch, Storechatocc.get(ch)+1);
+			}
+			else
+			{
+				Storechatocc.put(ch, 1);
+			}
+		}
+		
+	}
+}

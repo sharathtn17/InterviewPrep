@@ -1,0 +1,51 @@
+package testProject.test;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
+public class priorityQ {
+
+	
+	public static void main(String args[])
+	{
+		
+		
+		Comparator<String> stringLengthComparator = new Comparator<String>() {
+
+
+
+			@Override
+			public int compare(String o1, String o2) {
+				// TODO Auto-generated method stub
+				
+	            	return o1.length()-o2.length();
+	            	
+			}
+        };
+        
+        ArrayList<Integer> a=new ArrayList<Integer>();
+        
+        
+        
+		PriorityQueue<String> pq=new  PriorityQueue<String>(stringLengthComparator);
+		
+		pq.add("www");
+		pq.add("c");
+		pq.add("dddd");
+		pq.add("ss");
+		
+		pq.add("vvvvv");
+	//	pq.add("ee");
+		
+		for(String a:pq)
+		{
+			System.out.println(a);
+			
+			
+			
+		}
+		
+		
+	}
+}

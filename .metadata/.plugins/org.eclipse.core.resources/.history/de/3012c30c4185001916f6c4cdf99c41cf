@@ -1,0 +1,28 @@
+package Interview;
+
+public class QueuImp {
+
+	static class queue
+	{
+		
+		int rear=-1;
+		int front=-1;
+		
+		int max=99;
+		int que[]=new int[max];
+		
+		
+		
+		
+		
+	}
+	
+	
+	public static void main(String args[])
+	{
+		
+		
+		
+	}
+	
+}

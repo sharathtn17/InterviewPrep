@@ -1,0 +1,21 @@
+package testProject.test;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+public class Testarrya {
+
+	
+	public static void main(String args[])
+	{
+		int arr[]={3,4,5,2,4,7,3};
+		ArrayList<Integer> list=new 	ArrayList<Integer>();
+		
+		for(int a:arr)
+		{
+			
+		}
+		
+		
+	}
+}

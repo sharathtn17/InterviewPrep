@@ -1,0 +1,36 @@
+package Profram;
+
+public class PrintNameinStar {
+	public static void main(String[] args) {
+		String s = "Sharath";
+		
+	}
+
+}
+
+/*     * 
+    **
+   ***
+  ****
+ *****
+******
+*/
+
+
+/*--
+********
+******
+****
+**
+*
+
+--
+*/
+
+
+/*------------
+s
+sh
+sha
+shar
+-----------*/

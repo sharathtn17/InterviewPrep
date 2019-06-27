@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;testProject.test.remove.java&apos; to &apos;removeDuplicateElements.java&apos;&#x0D;&#x0A;- Original project: &apos;test&apos;&#x0D;&#x0A;- Original element: &apos;testProject.test.remove.java&apos;&#x0D;&#x0A;- Renamed element: &apos;testProject.test.removeDuplicateElements.java&apos;" description="Rename compilation unit &apos;remove.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;testProject.test{remove.java" name="removeDuplicateElements.java" references="false" stamp="1533977899276" version="1.0"/>
+</session>

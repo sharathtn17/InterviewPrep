@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.framework.utility.ConfigReader&apos; to &apos;PropertiesReader&apos;&#x0D;&#x0A;- Original project: &apos;FrameWork&apos;&#x0D;&#x0A;- Original element: &apos;com.framework.utility.ConfigReader&apos;&#x0D;&#x0A;- Renamed element: &apos;com.framework.utility.PropertiesReader&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ConfigReader&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.framework.utility{ConfigReader.java[ConfigReader" matchStrategy="1" name="PropertiesReader" qualified="false" references="true" similarDeclarations="false" stamp="1531991811263" textual="false" version="1.0"/>
+</session>

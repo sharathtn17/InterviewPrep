@@ -1,0 +1,20 @@
+package testProject.test;
+
+import java.awt.List;
+
+public class Testarrya {
+
+	
+	public static void main(String args[])
+	{
+		int arr[]={3,4,5,2,4,7,3};
+		List<Integer> list=new List<Integer>();
+		
+		for(int a:arr)
+		{
+			
+		}
+		
+		
+	}
+}

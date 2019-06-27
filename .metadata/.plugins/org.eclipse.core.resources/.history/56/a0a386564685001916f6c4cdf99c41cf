@@ -1,0 +1,30 @@
+package Interview;
+
+public class ComaparableImp {
+	
+	
+	public static void main(String args[])
+	{
+		
+		
+	}
+	
+
+}
+
+
+class Bottles{
+	
+	int id;
+	String type;
+	String ComPName;
+	
+	Bottles(int id,String type,String ComPName)
+	{
+	  this.id=id;
+	  this.type=type;
+	  this.ComPName=ComPName;
+	}
+     
+	
+}

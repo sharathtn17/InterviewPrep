@@ -1,0 +1,26 @@
+package testProject.test;
+
+public class stringManupilation {
+	
+	
+	public static void main(String args[])
+	{
+		
+		String s1="abcd";
+		String s2="ef";
+		String s3="";
+		
+		if(s1.length()>=s2.length())
+		{   int i=s1.length();
+			for(char c:s1.toCharArray())
+			{
+				s3=s3+s1.charAt(i)+s2.charAt(i)+"";
+			}
+			
+			
+		}
+		
+		
+	}
+
+}

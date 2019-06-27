@@ -1,0 +1,54 @@
+package Interview;
+
+public class separateZeros {
+	
+	
+	public static void main(String args[])
+	{
+		int[] arr={1,1,1,0,1,0,1,0,0,1};
+		
+		int count=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i]==1)
+			count++;
+			
+		}
+			for(int i=0;i<count;i++)
+			{
+				arr[i]=1;
+				
+			}
+			for(int i=count;i<arr.length;i++)
+			{
+				arr[i]=0;
+				
+			}
+			
+			/*if(arr[i]==0 && j<arr.length )
+			{ 	
+				while(arr[j]!=1 &&j<arr.length )
+				{
+				j++;
+				
+				}
+				
+				arr[i]=1;
+				arr[j]=0;
+				i++;
+				if(j==arr.length-1) break;
+				else j=i+1;
+				
+			} else 
+			{
+				i++;
+				j++;
+			}*/
+			 
+			
+		
+		for(int k:arr)
+		System.out.print(k);
+	}
+
+}

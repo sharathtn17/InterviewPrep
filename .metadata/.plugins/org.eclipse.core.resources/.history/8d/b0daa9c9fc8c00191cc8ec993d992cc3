@@ -1,0 +1,99 @@
+package testProject.test;
+
+public class ILinkedList {
+     Node head;
+     Node last;
+	
+	static class Node{
+		
+		int data;
+		Node next;
+		
+		Node(int data,Node cur)
+		{
+			this.data=data;
+			this.next=cur;
+		}
+	}
+	
+	
+	void add(int data)
+	{   
+		//addToLast(int data,);
+		Node l=last;
+		Node newNode=new Node(data,null);
+		last=newNode;
+		if(l!=null)
+		{
+			l.next=newNode;
+		}
+		else
+		{
+			head=newNode;
+		}
+		
+	}
+	
+	public void reverse()
+	{ 
+		 Node i=head;
+		 Node j=head.next;
+			while(i.next!=null)
+			{
+				System.out.println(i.data);;
+				i=i.next;
+				//System.out.println(i.data);;
+			}
+			
+		
+	    i.next=head;
+	  //  i.next=null;
+	    head=j;
+	   // head.next=null;
+		
+	}
+
+	public String toStirng()
+	{    Node i=head;
+		while(i.next!=null)
+		{
+			System.out.println(i.data);;
+			i=i.next;
+			//System.out.println(i.data);;
+		}
+		return "";
+	}
+	
+	void addToLast()
+	{
+		
+	}
+	
+	 public String toString(){//overriding the toString() method  
+		   Node i=head;
+			while(i.next!=null)
+			{
+				System.out.println(i.data);;
+				i=i.next;
+				//System.out.println(i.data);;
+			}
+			return Integer.toString(i.data);
+			 
+	 }
+	 
+	
+	public static void main(String[] s)
+	{
+		ILinkedList l=new ILinkedList();
+		
+		l.add(2);
+		l.add(3);
+		l.add(30);
+		l.add(32);
+		System.out.println(l);
+	l.reverse();
+		System.out.println(l);
+		
+	}
+}
+

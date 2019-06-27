@@ -1,0 +1,63 @@
+package testProject.test;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
+import org.apache.commons.collections4.iterators.ReverseListIterator;
+
+public class priorityQ {
+
+	
+	public static void main(String args[])
+	{
+		
+		
+		Comparator<String> stringLengthComparator = new Comparator<String>() {
+
+
+
+			@Override
+			public int compare(String o1, String o2) {
+				// TODO Auto-generated method stub
+				int retVal = o1.length()-o2.length();
+					System.out.println("   "+o1+"    Length  "+o1.length()+"---"+o2+"Length  "+o2.length()+ "*****  "+retVal);
+	            	return retVal;
+	            	
+			}
+        };
+        
+        ArrayList<Integer> a1=new ArrayList<Integer>();
+        a1.add(43);
+        a1.add(4);
+        a1.add(2);
+        a1.add(33);
+        a1.add(32);
+      //  ReverseListIterator ls=new ReverseListIterator(a1);
+        
+        //while (ls.hasNext()) {
+        //    System.out.println(ls.next());
+        //}	 
+        
+        
+		PriorityQueue<String> pq=new  PriorityQueue<String>(stringLengthComparator);
+		
+		pq.add("www");
+		pq.add("c");
+		pq.add("dddd");
+		pq.add("ss");
+		
+		pq.add("vvvvv");
+	//	pq.add("ee");
+		
+		for(String a:pq)
+		{
+			System.out.println(a);
+			
+			
+			
+		}
+		
+		
+	}
+}

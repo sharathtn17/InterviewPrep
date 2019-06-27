@@ -1,0 +1,117 @@
+package testProject.test;
+
+public class ILinkedList {
+	static Node head;
+	Node last;
+
+	static class Node {
+
+		int data;
+		Node next;
+
+		Node(int data, Node cur) {
+			this.data = data;
+			this.next = cur;
+		}
+	}
+
+	void add(int data) {
+		// addToLast(int data,);
+		Node l = last;
+		Node newNode = new Node(data, null);
+		last = newNode;
+		if (l != null) {
+			l.next = newNode;
+		} else {
+			head = newNode;
+		}
+
+	}
+
+	public void reverse() { // add head to temp1
+		Node temp1 = head;
+		// add next to head element in temp2 and making temp.next null
+		Node temp2 = temp1.next;
+		temp1.next = null;
+
+		// storing third element in temp3
+		Node temp3 = temp2.next;
+
+		// assining temp2.next to temp reverse linking
+		temp2.next = temp1;
+
+		// temp2.next=temp1; (temp1)a<-b(temp2) (temp3)c->d->f
+		while (temp3.next != null) {
+			temp1 = temp3;// a<-b(temp2(linkedalready)) (temp3)(temp1)c->d->f
+			temp3 = temp1.next;// a<-b(temp2(linkedalready))
+								// (temp1)c->d(temp3)->f
+
+			temp1.next = temp2;// a<-b(temp2)<-(temp1)c->d(temp3)->f
+
+		}
+
+		temp3.next = temp1;// assinging last telement to temp3
+		// temp3.next=null;
+		head = temp3;// making it as a head
+	}
+
+	public Node reverseRec(Node node) {
+		Node n = node;
+
+		if (n.next == null) {
+			head = n;
+			return n;
+		}
+
+		Node n2= reverseRec(n.next);
+		
+		return n2;
+
+	}
+
+	public String toStirng() {
+		Node i = head;
+		while (i.next != null) {
+			System.out.println(i.data);
+			;
+			i = i.next;
+			// System.out.println(i.data);;
+		}
+		return "";
+	}
+
+	void addToLast() {
+
+	}
+
+	public String toString() {// overriding the toString() method
+		Node i = head;
+		while (i.next != null) {
+			System.out.println(i.data);
+			;
+			i = i.next;
+			// System.out.println(i.data);;
+		}
+		return Integer.toString(i.data);
+
+	}
+
+	public static void main(String[] s) {
+		ILinkedList l = new ILinkedList();
+
+		l.add(1);
+		l.add(2);
+		l.add(3);
+		l.add(4);
+		System.out.println(l);
+		/*
+		 * l.reverse(); System.out.println("After Reverse");
+		 * System.out.println(l)
+		 */;
+		Node a = l.reverseRec(head);
+		a.next = null;
+		System.out.println("After Reverse");
+		System.out.println(l);
+
+	}
+}

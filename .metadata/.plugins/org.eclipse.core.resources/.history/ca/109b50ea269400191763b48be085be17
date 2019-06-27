@@ -1,0 +1,19 @@
+package newconcept;
+
+public class ThreadLocalImp {
+
+	
+	static ThreadLocal<ThreadLocalImp> t=new ThreadLocal<ThreadLocalImp>();
+	
+	
+	public static void get()
+	{
+		t.get();
+	}
+	public static void main(String args[])
+	{
+		
+		ThreadLocalImp.get();
+		
+	}
+}

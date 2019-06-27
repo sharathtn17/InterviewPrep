@@ -1,0 +1,16 @@
+package Profram;
+
+public class Count {
+	
+	public static void main(String[] args) {
+		int count=0;
+		int a[] = {1,2,3,4,5,456,2,46,5745,2345,36576,53,24,6456};
+		
+		for(int i=0;i<a.length;i++)
+		{
+			count++;
+		}
+		System.out.println(count);
+	}
+
+}

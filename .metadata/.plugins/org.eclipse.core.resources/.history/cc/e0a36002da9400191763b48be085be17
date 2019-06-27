@@ -1,0 +1,101 @@
+package dataStructure;
+
+public class ImplementTree {
+
+	Node root;
+	
+	class Node
+	{
+		Node left,right=null;
+		int key;
+		Node(int ele)
+		{
+			this.key=ele;
+		}
+	}
+	
+	public Node hightofElement(Node root1,int ele,int level)
+	{
+		Node temp=root1;
+		if(temp.key==ele)
+		{
+			System.out.println(level);
+			return level;
+		}
+		
+		if(temp.left!=null)
+			hightofElement(temp.left,ele,level+1);	
+		if(temp.right!=null)
+			hightofElement(temp.right,ele,level+1);
+		
+		return level;
+		
+	}
+	public Node traverse(Node root1)
+	{
+		Node temp=root1;
+	//	if(temp.left==null)
+	    
+		
+	//	if(temp.right==null)
+		//     System.out.print(temp.key);
+	    
+	    if(temp.left!=null)
+	    traverse(temp.left);
+	   
+	    if(temp.right!=null)
+	    traverse(temp.right);	
+	    System.out.print(temp.key);
+	    return temp;
+	}
+    
+	
+	
+	public Node add(Node root1,int key)
+	{
+		Node temp=root1;
+		if(root==null)
+		{Node nodenew=new Node(key);
+			root=nodenew;
+			System.out.println("added to root");
+			return root;
+		}else 
+		if(temp.right==null && temp.left==null)
+		{   Node nodenew=new Node(key);
+		   if(key>temp.key)
+		   {
+			  temp.right=nodenew; 
+			  System.out.println("added to right");
+		   }else
+		   {
+			   temp.left=nodenew; 
+			   System.out.println("added to left");
+		   }
+		   // root=nodenew;
+		    return root;
+			//System.out.println("TREE EMPTY");
+			
+		}
+		
+			
+		if(key>temp.key)
+		{    if(temp.right!=null)
+			add(temp.right,key);
+		else {
+			Node nodenew=new Node(key);
+			temp.right=nodenew; 
+			System.out.println("added to right");
+		}
+		}else{
+			
+			add(temp.left,key);
+		}
+		
+		
+		return temp;
+		
+	}
+	
+	
+}
+

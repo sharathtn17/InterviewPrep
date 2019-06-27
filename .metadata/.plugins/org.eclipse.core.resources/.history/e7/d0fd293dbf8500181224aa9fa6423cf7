@@ -1,0 +1,59 @@
+package com.framework.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.framework.action.Actions;
+
+
+
+
+public class HomePage extends Page{
+	
+By by=By.xpath("");
+	
+	public HomePage(WebDriver driver) {
+		super(driver);
+		
+	}
+	
+	public HomePage(){
+		
+	}
+	
+	public final String username="";
+	
+	
+	public HomePage login() {
+		loadPage(url);
+		System.out.println("Home Page");
+		return new HomePage();
+		//BufferedReader br = new BufferedReader(new FileReader(file));
+	}
+	
+	
+	public LoginPage clickSignInLink(){
+		
+		String loginLink_xpath ="";
+		
+		WebElement loginLink = findElementByXpath(loginLink_xpath);
+		click(loginLink);
+		
+		return new LoginPage();
+	}
+	
+
+
+
+	protected String getPageName() {
+		return "Home Page";
+	}
+	 
+
+	protected String pageName() {
+		return "Home Page";
+	}
+
+	
+}

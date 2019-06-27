@@ -1,0 +1,16 @@
+package testProject.test;
+
+import java.util.HashMap;
+
+public class palindrome {
+
+	
+	
+	public static void main(String[]  args)
+	{
+		HashMap<Character,Integer> Storechatocc=new HashMap<Character,Integer>();
+		
+		
+		
+	}
+}

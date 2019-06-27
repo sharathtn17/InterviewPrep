@@ -1,0 +1,12 @@
+package testProject.test;
+
+public class palindrome {
+
+	
+	
+	public static void main(String[]  args)
+	{
+		HaspMap<Character,integer> Storechatocc=new HaspMap<Charecter,interger>();
+		
+	}
+}

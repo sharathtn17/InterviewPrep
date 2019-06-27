@@ -1,0 +1,40 @@
+package Interview;
+
+public class QueuImp {
+
+	static class queue
+	{
+		
+		int rear=-1;
+		int front=-1;
+		
+		int max=99;
+		int que[]=new int[max];
+		
+		boolean isEmpty()
+		{
+			if(front==-1)
+				return true;
+			else
+				return false;
+		}
+		boolean isEmpty()
+		{
+			if(front==max)
+				return true;
+			else
+				return false;
+		}
+		
+		
+	}
+	
+	
+	public static void main(String args[])
+	{
+		
+		
+		
+	}
+	
+}

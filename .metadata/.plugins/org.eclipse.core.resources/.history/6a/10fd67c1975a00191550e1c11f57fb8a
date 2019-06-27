@@ -1,0 +1,45 @@
+package Collection;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Comparator;
+
+
+public class Library {
+	
+
+	public static void main(String[] args)
+	{
+		Student s1=new Student(10,"aane");
+		Student s2=new Student(3,"jinke");
+		Student s3=new Student(1,"koli");
+		Student s4=new Student(8,"huli");
+		
+		InterfaceExp e=(n,m)->{
+						
+						//int n=10;
+						System.out.println(n*m);
+					
+			     
+				
+		};
+		
+		e.iFive();
+		List<Student> l=Arrays.asList(s1,s2,s3,s4);
+		System.out.println("Before Sorting");
+		l.stream().forEach(n->System.out.println(n));
+		
+		l.sort((ss1, ss2)->ss1.getName().compareTo(ss2.getName()));
+		System.out.println("After Sorting");
+		l.forEach(n->System.out.println(n));
+		
+		Comparator<Student> idCmp=(ss1,ss2)->ss1.getId()-ss2.getId();
+		l.sort(idCmp.reversed());
+		System.out.println("After Sorting ID");
+		l.forEach(n->System.out.println(n.getId()+" "+n.getName()));
+		//sort by id
+		
+		//Comparator<Student> idcomp=(Student s1, Student s2)->s1.;
+	}
+	
+}

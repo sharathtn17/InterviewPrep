@@ -1,0 +1,54 @@
+package testProject.test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class removeduparray {
+
+	
+	public static int[] rdup(int arr1[])
+	{
+		//int[] arr = null;
+		int [] temp=new int[arr1.length];
+	int n=arr1.length;	
+     int j=0;
+		
+     for (int i=0; i<n-1; i++)
+    	 
+         // If current element is not equal
+         // to next element then store that
+         // current element
+         if (arr1[i] != arr1[i+1])
+             temp[j++] = arr1[i];
+  
+     // Store the last element as whether
+     // it is unique or repeated, it hasn't
+     // stored previously
+     temp[j++] = arr1[n-1];
+	}
+		
+	}
+	
+temp[j++]=arr1[arr1.length-1];
+    
+    for(int i=0;i<temp.length;i++)
+    {
+    	System.out.print(temp[i]);
+    }
+		return temp;
+		
+		
+		
+		
+	}
+	
+	public static void main(String args[])
+	{
+		int[] arr={2,3,6,6,3,6,3};
+		
+		rdup(arr);
+		
+		
+	}
+	
+}

@@ -1,0 +1,76 @@
+package com.project.pages;
+
+import java.time.Duration;
+import java.util.Vector;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.project.functionalComponet.Actions;
+import com.project.functionalComponet.BaseTest;
+
+public  class Page extends BaseTest{
+
+	Page p;
+	LoginPage lp;
+	WebDriverWait wait;
+	
+	public Page(){
+		wait = new WebDriverWait(driver, 30);
+	}
+	
+	public static String getTitle()
+	{   //Thread
+		//Alert
+		
+		String title=Actions.getTitle();
+		return title;
+	}
+	
+	public HomePage homePage() {
+		return new HomePage(driver);
+	}
+
+	public LoginPage Loginpage() {
+	 
+		 return new LoginPage(driver);
+	}
+	
+
+
+	
+	public HomePage _homePage() {
+		return (HomePage)this;
+	}
+	
+	public LoginPage _loginPage() {
+		return new LoginPage(driver);
+
+	}
+	
+	public WebDriverWait changeExplicitWaitDuration(WebDriver driver,Duration timeout){
+		//wait = new WebDriverWait(driver, timeout.getSeconds());
+		wait.withTimeout(timeout);
+		return null;
+		
+		By by=new By();
+		
+		
+	}
+	
+	
+	
+	/*protected abstract String pageName();
+	verifyPageUrl()
+	confirmSecurityAlert()
+	switchToWindow()
+	navigateTo()
+	verifyPageTitle()
+	captureScreenShot()
+	isVerticalPage();
+	switchToFrame();
+	SwitchBack()
+	waitForPageAngToLoad()*/
+
+}

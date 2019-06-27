@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;haR.bmpProxy.java&apos; to &apos;MobProxy.java&apos;&#x0D;&#x0A;- Original project: &apos;test&apos;&#x0D;&#x0A;- Original element: &apos;haR.bmpProxy.java&apos;&#x0D;&#x0A;- Renamed element: &apos;haR.MobProxy.java&apos;" description="Rename compilation unit &apos;bmpProxy.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;haR{bmpProxy.java" name="MobProxy.java" references="false" stamp="1559556586252" version="1.0"/>
+</session>

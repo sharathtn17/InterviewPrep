@@ -1,0 +1,32 @@
+package Interview;
+
+public class ComaparableImp {
+	
+	
+	public static void main(String args[])
+	{
+		Bottles bot=new Bottles(1,"Plastic","Tupperware");
+		Bottles bot=new Bottles(1,"Hard Plastic","Signoware");
+		Bottles bot=new Bottles(1,"Steel","Milton");
+		Bottles bot=new Bottles(1,"Aluminium","Celloware");
+	}
+	
+
+}
+
+
+class Bottles{
+	
+	int id;
+	String type;
+	String ComPName;
+	
+	Bottles(int id,String type,String ComPName)
+	{
+	  this.id=id;
+	  this.type=type;
+	  this.ComPName=ComPName;
+	}
+     
+	
+}

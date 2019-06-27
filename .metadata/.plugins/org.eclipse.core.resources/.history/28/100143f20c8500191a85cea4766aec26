@@ -1,0 +1,29 @@
+package Interview;
+
+import java.util.HashMap;
+
+public class BalancedParantisis {
+	
+	HashMap<Character,Character> map=new HashMap<Character,Character>(){
+		add('{','}');
+		
+	};
+
+	public static void main(String args[])
+	{
+		int top=-1;
+		
+		
+		
+	}
+	
+	public boolean matchingParentis()
+	{
+		map.put(key, value)
+		
+		
+		
+		return false;
+	}
+
+}

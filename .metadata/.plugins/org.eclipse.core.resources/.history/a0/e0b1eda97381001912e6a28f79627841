@@ -1,0 +1,23 @@
+package ExcelOperation;
+
+import com.poiji.annotation.ExcelCell;
+import com.poiji.annotation.ExcelRow;
+
+import io.github.millij.poi.ss.model.annotations.Sheet;
+import io.github.millij.poi.ss.model.annotations.SheetColumn;
+
+public class Employee {
+	
+	    @ExcelRow                    
+	    public int rowIndex;
+
+	    @ExcelCell(0)                
+	    public int Age;     
+
+	    @ExcelCell(1)
+	    public String Name;
+
+	
+}
+
+

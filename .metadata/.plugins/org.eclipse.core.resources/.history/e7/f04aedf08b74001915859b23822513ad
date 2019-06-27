@@ -1,0 +1,34 @@
+package newconcept;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+
+public class FuntionJava8 {
+	
+	
+	
+	public static void  main(String args)
+	{
+		
+		Function<Integer,Integer> Fun=(i)->{
+			if(i%2==0)
+				System.out.println("EVEN");
+			else System.out.println("ODD");
+			return i;
+			};
+
+			List<Integer> list1=new ArrayList<>();
+			list1.add(10);
+			list1.add(9);
+			list1.add(8);
+			
+		for(int a:list1)
+		{
+			Fun.apply(a);
+		}
+			
+	}
+	
+
+}

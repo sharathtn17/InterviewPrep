@@ -1,0 +1,35 @@
+package Scjp;
+
+public class Exception {
+
+//	public static void main(String args[])
+//	{
+//	try{
+//		
+//		System.out.println(10/0);
+//		System.out.println("try after error");
+//		System.out.println("try after error2");
+//	}
+//	
+//	finally{
+//		System.out.println("finally");
+//	}
+//	System.out.println("after finally");
+//	}
+	
+	public static void main(String args[]) {
+		Exception a = new Exception();
+		ExceptionChild b = (ExceptionChild) a;
+		b.printHi();
+	}
+	
+}
+
+
+class ExceptionChild extends Exception {
+	public void printHi(){
+		System.out.print("Hi");
+	}
+	
+}
+

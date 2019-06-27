@@ -1,0 +1,89 @@
+package com.framework.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.google.common.base.Function;
+
+
+
+public abstract class Page{
+
+	public static WebDriver driver;
+
+	public Page( WebDriver driver, String HomePageURL) {
+		this.driver=driver;
+		driver.get(HomePageURL);
+		String pageName = pageName();
+
+	}
+	
+	public Page(){
+		
+	}
+
+	protected abstract String pageName();
+
+	public static void initializeDriver(String browser){
+
+		if(browser.equals("firefox"))
+		{
+			driver=new FirefoxDriver();
+		}
+
+		if(browser.equals("chrome"))
+		{
+		System.setProperty("webdriver.chrome.driver", "C:/WebDriverServerStart/chromedriver.exe");
+		driver=new ChromeDriver();
+		}
+
+   
+
+	}
+
+	protected WebElement findElementByXpath(String xpathExpression) {
+		// TODO Auto-generated method stub
+		return driver.findElement(By.xpath(xpathExpression));
+		
+	}
+	
+
+	protected void click(String xpath) {
+		// TODO Auto-generated method stub
+		waitForElement(By.xpath(xpath),20);
+		driver.findElement(By.xpath(xpath)).click();
+		
+	}
+	
+	protected void waitForElement(By locator,int waitTime)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, waitTime);
+		wait.until(ExpectedConditions.elementToBeClickable(locator));
+	}
+	public HomePage loadPage(String url) {
+		
+		driver.get(url);
+		return new HomePage();
+		// TODO Auto-generated method stub
+		
+	}
+
+	public String getText(String xpath)
+	{
+		
+		return driver.findElement(By.xpath(xpath)).getText();
+		
+	}
+	
+	protected void enterText(WebElement webElement, String text) {
+		// TODO Auto-generated method stub
+		
+		webElement.sendKeys(text);
+		
+	}
+}

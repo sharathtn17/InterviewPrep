@@ -1,0 +1,83 @@
+package dataStructure;
+
+public class LinkedListImp {
+     Node head;
+	
+	public  void addToList(int element)
+	{   
+		
+		if(head==null)
+		{ Node newnode=new Node(element);
+			//newnode.data=element;
+		    head=newnode;
+			newnode.next=null;
+			System.out.println("Head");
+		}else{
+			Node temp=head;
+		while(temp.next!=null)
+		{   
+			temp=temp.next;
+		}
+		Node newnode=new Node(element);
+		temp.next=newnode;
+		newnode.data=element;
+		newnode.next=null;
+	}
+	}
+	
+	public void traverseAndPrint()
+	{
+		Node temp=head;
+		
+		if(head==null)
+		{
+			System.out.println("List Is EMPTY");
+		}else{
+			while(temp!=null)
+			{
+			System.out.print(temp.data+",");
+			temp=temp.next;
+			}
+		}
+		
+	}
+	
+	public void remove()
+	{
+	   Node temp=head;
+	   Node prev=null;
+		if(head==null)
+		{
+			System.out.println("List Is Empty");
+		}else
+		{
+			while(temp.next!=null)
+			{
+				prev=temp;
+				temp=temp.next;
+			}
+			
+			prev.next=null;
+			System.out.println(temp.data+"Removed");
+		}
+		
+	}
+	
+	
+	static  class Node
+	{
+		int data;
+		Node next;
+		
+		public Node(int element)
+		{
+		//	Node newnode=new Node(element);
+			this.data=element;
+			
+		}
+		
+		
+	}
+	 
+	 
+}

@@ -1,0 +1,10 @@
+package com.learn.framework.rest;
+
+import org.springframework.web.bind.annotation.RestController;
+
+/*@RestController
+@R
+public class OrdersCreation {
+
+}
+*/

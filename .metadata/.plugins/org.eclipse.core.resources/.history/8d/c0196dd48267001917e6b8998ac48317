@@ -1,0 +1,20 @@
+package testProject.test;
+
+import java.util.HashSet;
+
+public class overrideHashSet {
+	
+	
+	@Override public int hashCode() { return 1;}
+    @Override public String toString() { return "100"; }
+    @Override public boolean equals(Object o) { return this.equals(o); }
+
+    
+    HashSet<overrideHashSet> set=new HashSet<overrideHashSet>() ;
+    set
+   public static void main(String args[])
+   {
+	   
+	   set.
+   }
+}
